@@ -1,8 +1,24 @@
-{
+    {
     "name": "ognev/php-project-lvl1",
+    "authors": [
+        {
+          "name": "Ilya Ognev",
+          "email": "j.kodanavi@gmail.com"
+        }
+      ],
+    "description": "hexlet education project",
+    "license": "MIT",
     "bin": [
         "bin/brain-games"
     ],
-    "require": {}
+    "autoload": {
+      "files": [
+        "src/Cli.php"
+      ]
+    },
+    "require": {
+        "wp-cli/php-cli-tools" : "^0.11.11"
+    }
+    
     
 }
