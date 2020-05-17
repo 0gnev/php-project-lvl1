@@ -1,0 +1,7 @@
+{
+    "name": "ognev/php-project-lvl1",
+    "require": {}
+    "bin": [
+        "bin/brain-games"
+    ]
+}
