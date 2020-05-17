@@ -26,4 +26,4 @@ jobs:
     # - name: Run test suite
     #   run: composer run-script test
     - name: PHP Lint
-      uses: michaelw90/PHP-Lint@1.0.0
+      run: make lint
