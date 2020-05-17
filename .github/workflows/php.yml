@@ -12,8 +12,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: PHP Lint
-      uses: michaelw90/PHP-Lint@1.0.0
+    - uses: actions/checkout@v1
+    - uses: michaelw90/PHP-Lint@master
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
     # Docs: https://getcomposer.org/doc/articles/scripts.md
