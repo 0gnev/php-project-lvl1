@@ -12,8 +12,9 @@ jobs:
     runs-on: ubuntu-18.04
 
     steps:
-    - name: PHP Syntax Checker (Lint)
-      uses: StephaneBour/actions-php-lint@7.4
+      - uses: actions/checkout@v2
+      - name: PHP Syntax Checker (Lint)
+        uses: StephaneBour/actions-php-lint@7.4
 
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
