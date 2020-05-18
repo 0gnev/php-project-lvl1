@@ -6,4 +6,4 @@ This is education project
 src="https://api.codeclimate.com/v1/badges/93ff1e3d74b67fd9ce92/maintainability" /></a>
 
 brain-even game
-<script src="https://asciinema.org/a/eZavz5V2z8p1Ne7Ovf8BY1Q5s" async data-autoplay="true" data-size="big"></script>
+<a href="https://asciinema.org/a/eZavz5V2z8p1Ne7Ovf8BY1Q5s" target="_blank"><img src="https://asciinema.org/a/eZavz5V2z8p1Ne7Ovf8BY1Q5s.svg" /></a>
