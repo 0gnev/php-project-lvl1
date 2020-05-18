@@ -1,0 +1,15 @@
+#!/usr/bin/env php
+
+<?php
+
+use function cli\line;
+
+require __DIR__ . '/../vendor/autoload.php';
+use BrainGames\Cli;
+
+$name = Cli\run();
+$count = 0;
+while ($count < 3) {
+    $count += Cli\ask($name);
+}
+line("Congratulations, %s!", $name);
