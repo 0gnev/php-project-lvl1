@@ -1,0 +1,32 @@
+#!/usr/bin/env php
+
+<?php
+
+use BrainGames\Cli;
+
+require __DIR__ . '/../vendor/autoload.php';
+
+function isPrime($a)
+{
+    if ($a === 2) {
+        return 'yes';
+    }
+    $i = 2;
+    while ($i <= sqrt($a)) {
+        if ($a % $i == 0) {
+            return 'no';
+        }
+        $i++;
+    }
+    return 'yes';
+}
+
+$name = Cli\run('Answer "yes" if given number is prime. Otherwise answer "no".');
+$count = 0;
+while ($count < 3) {
+    $a = rand(1, 100);
+    $question = $a;
+    $correct_answer = isPrime($a);
+    $count += Cli\ask($question, (string) $correct_answer, $name);
+}
+Cli\congrat($name);
