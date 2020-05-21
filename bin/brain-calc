@@ -3,7 +3,6 @@
 <?php
 
 use BrainGames\Cli;
-use function cli\line;
 
 require __DIR__ . '/../vendor/autoload.php';
 
@@ -20,9 +19,9 @@ while ($count < 3) {
     }
     $a = rand(1, 100);
     $b = rand(1, 100);
-    $equation = "{$a} {$sign} {$b}";  
+    $equation = "{$a} {$sign} {$b}";
     #$correct_answer = eval($equation);
     eval('$correct_answer = ' . $equation . ';');
-    $count += Cli\ask($equation,(string) $correct_answer, $name);
+    $count += Cli\ask($equation, (string) $correct_answer, $name);
 }
-line("Congratulations, %s!", $name);
+Cli\congrat($name);

@@ -25,3 +25,7 @@ function ask($question, $correct_answer, $name)
         return false;
     }
 }
+function congrat($name)
+{
+    line("Congratulations, %s!", $name);
+}

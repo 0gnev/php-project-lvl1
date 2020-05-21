@@ -5,7 +5,6 @@
 use BrainGames\Cli;
 
 require __DIR__ . '/../vendor/autoload.php';
-use function cli\line;
 
 $name = Cli\run('Answer "yes" if the number is even, otherwise answer "no".');
 
@@ -15,4 +14,4 @@ while ($count < 3) {
     $correct_answer = $rand_number % 2 == 0 ? "yes" : "no";
     $count += Cli\ask($rand_number, $correct_answer, $name);
 }
-line("Congratulations, %s!", $name);
+Cli\congrat($name);
