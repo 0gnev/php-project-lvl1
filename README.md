@@ -7,3 +7,6 @@ src="https://api.codeclimate.com/v1/badges/93ff1e3d74b67fd9ce92/maintainability"
 
 brain-even game
 <a href="https://asciinema.org/a/eZavz5V2z8p1Ne7Ovf8BY1Q5s" target="_blank"><img src="https://asciinema.org/a/eZavz5V2z8p1Ne7Ovf8BY1Q5s.svg" /></a>
+
+brain-calc game
+<a href="https://asciinema.org/a/9qnBRpLBke8Os9X4Je2pvbbXE" target="_blank"><img src="https://asciinema.org/a/9qnBRpLBke8Os9X4Je2pvbbXE.svg" /></a>
