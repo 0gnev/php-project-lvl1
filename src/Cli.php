@@ -5,21 +5,19 @@ namespace BrainGames\Cli;
 use function cli\line;
 use function cli\prompt;
 
-function run()
+function run($rule)
 {
     line("Welcome to Brain Games!");
-    line('Answer "yes" if the number is even, otherwise answer "no".');
+    line($rule);
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
     return $name;
 }
-function ask($name)
+function ask($question, $correct_answer, $name)
 {
-    $rand_number = rand(1, 100);
-    line("Question: %s", $rand_number);
+    line("Question: %s", $question);
     $answer = prompt("Your answer");
-    $correct_answer = $rand_number % 2 == 0 ? "yes" : "no";
-    if ($rand_number % 2 === 0 && $answer === "yes" || $rand_number % 2 !== 0 && $answer === "no") {
+    if ($answer === $correct_answer) {
         line("Correct!");
         return true;
     } else {
