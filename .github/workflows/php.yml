@@ -16,7 +16,7 @@ jobs:
       - name: Validate composer.json and composer.lock
         run: composer validate
       - name: Detecting PHP Code Standards Violations
-        run: composer run-script phpcs
+        run: composer run-script phpcs -- --standard=PSR12 src bin
       - name: PHP Syntax Checker (Lint)
         uses: StephaneBour/actions-php-lint@7.4
 
