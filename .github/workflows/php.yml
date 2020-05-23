@@ -13,6 +13,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      - name: Validate composer.json and composer.lock
+        run: composer validate
+      - name: Detecting PHP Code Standards Violations
+        run: composer run-script phpcs
       - name: PHP Syntax Checker (Lint)
         uses: StephaneBour/actions-php-lint@7.4
 
