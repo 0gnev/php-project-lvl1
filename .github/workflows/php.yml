@@ -13,12 +13,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: PHPCS check
+      - name: PHPCS check --standard=PSR12 src bin
         uses: chekalsky/phpcs-action@v1
       - name: Validate composer.json and composer.lock
         run: composer validate
-      - name: Detecting PHP Code Standards Violations
-        run: composer run-script phpcs -- --standard=PSR12 src bin
       - name: PHP Syntax Checker (Lint)
         uses: StephaneBour/actions-php-lint@7.4
 
