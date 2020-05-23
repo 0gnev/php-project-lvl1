@@ -12,8 +12,6 @@ jobs:
     runs-on: ubuntu-18.04
 
     steps:
-      - name: Install dependencies
-        run: composer install
       - uses: actions/checkout@v2
       - name: PHPCS check
         uses: chekalsky/phpcs-action@v1
