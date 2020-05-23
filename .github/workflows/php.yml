@@ -13,7 +13,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: PHPCS check --standard=PSR12 src bin
+      - name: phpcs src bin --standard=PSR12 
         uses: chekalsky/phpcs-action@v1
       - name: Validate composer.json and composer.lock
         run: composer validate
