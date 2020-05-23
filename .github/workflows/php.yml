@@ -12,9 +12,11 @@ jobs:
     runs-on: ubuntu-18.04
 
     steps:
+      - name: Install dependencies
+        run: composer install --prefer-dist --no-progress --no-suggest
       - uses: actions/checkout@v2
-      - name: install PHP Code Sniffer
-        uses: squizlabs/php_codesniffer
+      - name: PHPCS check
+        uses: chekalsky/phpcs-action@v1
       - name: Validate composer.json and composer.lock
         run: composer validate
       - name: Detecting PHP Code Standards Violations
