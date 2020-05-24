@@ -12,22 +12,12 @@ jobs:
     runs-on: ubuntu-18.04
 
     steps:
-#      - uses: actions/checkout@v2
-#      - name: PHP Lint
-#        uses: michaelw90/PHP-Lint@2.0.0
-#      - name: PHP Syntax Checker (Lint)
-#        uses: StephaneBour/actions-php-lint@7.4
       - uses: actions/checkout@v2
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
-      - name: Run PHPCS inspection
-        uses: rtCamp/action-phpcs-code-review@v2.0.2
-        env:
-          GH_BOT_TOKEN: ${{ secrets.GH_BOT_TOKEN }}
-          SKIP_FOLDERS: ".github"
-        with:
-           args: "PSR1,PSR12"
-
+      - name: PHP Lint
+        uses: michaelw90/PHP-Lint@2.0.0
+      - run: make lint
+      
+      
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
     # Docs: https://getcomposer.org/doc/articles/scripts.md
 
