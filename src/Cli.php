@@ -21,7 +21,8 @@ function ask($question, $correct_answer, $name)
         line("Correct!");
         return true;
     } else {
-        line('"%s" is wrong answer ;(. Correct answer was "%s". Let\'s try again, %s!', $answer, $correct_answer, $name);
+        line('"%s" is wrong answer ;(. Correct answer was "%s". Let\'s try again, %s!',
+            $answer, $correct_answer, $name);
         return false;
     }
 }
