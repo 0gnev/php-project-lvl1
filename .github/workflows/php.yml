@@ -1,4 +1,4 @@
-name: PHP Composer
+name: PHP lint
 
 on:
   push:
@@ -13,12 +13,12 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: phpcs src bin --standard=PSR12 
-        uses: chekalsky/phpcs-action@v1
-      - name: Validate composer.json and composer.lock
-        run: composer validate
+      - name: PHP Lint
+        uses: michaelw90/PHP-Lint@2.0.0
       - name: PHP Syntax Checker (Lint)
         uses: StephaneBour/actions-php-lint@7.4
+      - name: PHPCS Code Review
+        uses: rtCamp/action-phpcs-code-review@v2.0.2
 
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
