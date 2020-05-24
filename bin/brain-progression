@@ -1,27 +1,8 @@
 #!/usr/bin/env php
 
 <?php
-
-use BrainGames\Cli;
-
 require __DIR__ . '/../vendor/autoload.php';
 
-$name = Cli\run('What number is missing in the progression?');
-$count = 0;
-while ($count < 3) {
-    $a = rand(1, 100);
-    $k = rand(1, 10);
-    $m = rand(0, 9);
-    $question = '';
-    for ($i = 0; $i < 10; $i++) {
-        if ($i == $m) {
-            $question .= '.. ';
-        } else {
-            $temp = $a + $k * $i;
-            $question .= "{$temp} ";
-        }
-    }
-    $correct_answer = $a + $k * $m;
-    $count += Cli\ask($question, (string) $correct_answer, $name);
-}
-Cli\congrat($name);
+use BrainGames\BrainProgression;
+
+BrainProgression\brain_progression();

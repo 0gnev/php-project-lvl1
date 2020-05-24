@@ -1,25 +1,8 @@
 #!/usr/bin/env php
 
 <?php
-
-use BrainGames\Cli;
-
 require __DIR__ . '/../vendor/autoload.php';
 
-$name = Cli\run('Find the greatest common divisor of given numbers.');
-$count = 0;
-while ($count < 3) {
-    $a = rand(1, 100);
-    $b = rand(1, 100);
-    $question = "{$a} {$b}";
-    while ($a != 0 && $b != 0) {
-        if ($a > $b) {
-            $a = $a % $b;
-        } else {
-            $b = $b % $a;
-        }
-    }
-    $correct_answer = $a + $b;
-    $count += Cli\ask($question, (string) $correct_answer, $name);
-}
-Cli\congrat($name);
+use BrainGames\BrainGcd;
+
+BrainGcd\brain_gcd();

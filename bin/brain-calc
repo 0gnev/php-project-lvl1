@@ -1,27 +1,8 @@
 #!/usr/bin/env php
 
 <?php
-
-use BrainGames\Cli;
-
 require __DIR__ . '/../vendor/autoload.php';
 
-$name = Cli\run("What is the result of the expression?");
-$count = 0;
-while ($count < 3) {
-    $sign = rand(1, 3);
-    if ($sign === 1) {
-        $sign = '+';
-    } elseif ($sign === 2) {
-        $sign = '-';
-    } else {
-        $sign = '*';
-    }
-    $a = rand(1, 100);
-    $b = rand(1, 100);
-    $equation = "{$a} {$sign} {$b}";
-    #$correct_answer = eval($equation);
-    eval('$correct_answer = ' . $equation . ';');
-    $count += Cli\ask($equation, (string) $correct_answer, $name);
-}
-Cli\congrat($name);
+use BrainGames\BrainCalc;
+
+BrainCalc\brain_calc();

@@ -18,6 +18,12 @@
   ],
   "autoload": {
     "files": [
+      "src/BrainPrime.php",
+      "src/BrainProgression.php",
+      "src/BrainGcd.php",
+      "src/BrainCalc.php",
+      "src/BrainEven.php",
+      "src/BrainGame.php",
       "src/Cli.php"
     ]
   },

@@ -1,17 +1,8 @@
 #!/usr/bin/env php
 
 <?php
-
-use BrainGames\Cli;
-
 require __DIR__ . '/../vendor/autoload.php';
 
-$name = Cli\run('Answer "yes" if the number is even, otherwise answer "no".');
+use BrainGames\BrainEven;
 
-$count = 0;
-while ($count < 3) {
-    $rand_number = rand(1, 100);
-    $correct_answer = $rand_number % 2 == 0 ? "yes" : "no";
-    $count += Cli\ask($rand_number, $correct_answer, $name);
-}
-Cli\congrat($name);
+BrainEven\brain_even();
