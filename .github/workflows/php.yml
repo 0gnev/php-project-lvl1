@@ -19,6 +19,10 @@ jobs:
         uses: StephaneBour/actions-php-lint@7.4
       - name: PHPCS Code Review
         uses: rtCamp/action-phpcs-code-review@v2.0.2
+        env:
+          GH_BOT_TOKEN: ${{ secrets.GH_BOT_TOKEN }}
+        with:
+          args: "PEAR,PSR1,PSR12"
 
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
