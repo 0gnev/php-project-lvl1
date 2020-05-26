@@ -25,7 +25,7 @@ function is_prime($a)
 
 function brain_prime()
 {
-    for ($i = 0; $i <= ROUNDS_COUNT; $i++) {
+    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $a = rand(MIN_RAND_NUMBER, MAX_RAND_NUMBER);
         $questions[$i] = $a;
         $answers[$i] = is_prime($a);

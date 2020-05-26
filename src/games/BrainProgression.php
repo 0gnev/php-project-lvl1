@@ -12,7 +12,7 @@ const INCRIMENT = 10;
 const ARRAY_SIZE = 10;
 function brain_progression()
 {
-    for ($i = 0; $i <= ROUNDS_COUNT; $i++) {
+    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $a = rand(MIN_RAND_NUMBER, MAX_RAND_NUMBER);
         $k = rand(MIN_RAND_NUMBER, INCRIMENT);
         $m = rand(0, ARRAY_SIZE - 1);

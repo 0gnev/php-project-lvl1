@@ -10,7 +10,7 @@ const MAX_RAND_NUMBER = 100;
 const MIN_RAND_NUMBER = 1;
 function brain_even()
 {
-    for ($i = 0; $i <= ROUNDS_COUNT; $i++) {
+    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $questions[$i] = rand(MIN_RAND_NUMBER, MAX_RAND_NUMBER);
         $answers[$i] = $questions[$i] % 2 == 0 ? "yes" : "no";
     }

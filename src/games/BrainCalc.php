@@ -11,7 +11,7 @@ const MAX_RAND_NUMBER = 100;
 
 function brain_calc()
 {
-    for ($i = 0; $i <= ROUNDS_COUNT; $i++) {
+    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $sign = rand(1, 3);
         $a = rand(MIN_RAND_NUMBER, MAX_RAND_NUMBER);
         $b = rand(MIN_RAND_NUMBER, MAX_RAND_NUMBER);
