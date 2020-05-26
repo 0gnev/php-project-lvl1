@@ -17,8 +17,8 @@ function brain_progression()
         $k = rand(MIN_RAND_NUMBER, INCRIMENT);
         $m = rand(0, ARRAY_SIZE - 1);
         $questions[$i] = '';
-        for ($i = 0; $i < ARRAY_SIZE; $i++) {
-            if ($i == $m) {
+        for ($l = 0; $l < ARRAY_SIZE; $l++) {
+            if ($l == $m) {
                 $questions[$i] .= '.. ';
             } else {
                 $temp = $a + $k * $i;
