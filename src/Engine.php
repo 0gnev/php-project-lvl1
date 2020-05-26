@@ -10,7 +10,7 @@ function game($intro, $questions, $answers)
 {
     $name = Cli\run($intro);
     $count = 0;
-    while ($count < ROUNDS_COUNT) {
+    while ($count < count($questions)) {
         if (Cli\ask($questions[$count], (string) $answers[$count], $name)) {
             $count++;
         } else {
