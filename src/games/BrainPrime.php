@@ -2,12 +2,14 @@
 
 namespace BrainGames\BrainPrime;
 
-use BrainGames\Cli;
 
-const ROUNDS_COUNT = 3;
+use BrainGames\Engine;
+
+use const BrainGames\Config\ROUNDS_COUNT;
+
 const MAX_RAND_NUMBER = 100;
 const MIN_RAND_NUMBER = 1;
-function isPrime($a)
+function is_prime($a)
 {
     if ($a === 2) {
         return 'yes';
@@ -24,13 +26,10 @@ function isPrime($a)
 
 function brain_prime()
 {
-    $name = Cli\run('Answer "yes" if given number is prime. Otherwise answer "no".');
-    $count = 0;
-    while ($count < ROUNDS_COUNT) {
+    for ($i = 0; $i <= ROUNDS_COUNT; $i++) {
         $a = rand(MIN_RAND_NUMBER, MAX_RAND_NUMBER);
-        $question = $a;
-        $correct_answer = isPrime($a);
-        $count += Cli\ask($question, (string) $correct_answer, $name);
+        $questions[$i] = $a;
+        $answers[$i] = is_prime($a);
     }
-    Cli\congrat($name);
+    Engine\game('Answer "yes" if given number is prime. Otherwise answer "no".', $questions, $answers);
 }

@@ -2,20 +2,18 @@
 
 namespace BrainGames\BrainGcd;
 
-use BrainGames\Cli;
+use BrainGames\Engine;
 
-const ROUNDS_COUNT = 3;
+use const BrainGames\Config\ROUNDS_COUNT;
+
 const MAX_RAND_NUMBER = 100;
 const MIN_RAND_NUMBER = 1;
 function brain_gcd()
 {
-
-    $name = Cli\run('Find the greatest common divisor of given numbers.');
-    $count = 0;
-    while ($count < ROUNDS_COUNT) {
+    for ($i = 0; $i <= ROUNDS_COUNT; $i++) {
         $a = rand(MIN_RAND_NUMBER, MAX_RAND_NUMBER);
         $b = rand(MIN_RAND_NUMBER, MAX_RAND_NUMBER);
-        $question = "{$a} {$b}";
+        $questions[$i] = "{$a} {$b}";
         while ($a != 0 && $b != 0) {
             if ($a > $b) {
                 $a = $a % $b;
@@ -23,8 +21,7 @@ function brain_gcd()
                 $b = $b % $a;
             }
         }
-        $correct_answer = $a + $b;
-        $count += Cli\ask($question, (string) $correct_answer, $name);
+        $answers[$i] = $a + $b;
     }
-    Cli\congrat($name);
+    Engine\game('Find the greatest common divisor of given numbers.', $questions, $answers);
 }

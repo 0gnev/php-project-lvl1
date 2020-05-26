@@ -18,13 +18,15 @@
   ],
   "autoload": {
     "files": [
-      "src/BrainPrime.php",
-      "src/BrainProgression.php",
-      "src/BrainGcd.php",
-      "src/BrainCalc.php",
-      "src/BrainEven.php",
-      "src/BrainGame.php",
-      "src/Cli.php"
+      "src/games/BrainPrime.php",
+      "src/games/BrainProgression.php",
+      "src/games/BrainGcd.php",
+      "src/games/BrainCalc.php",
+      "src/games/BrainEven.php",
+      "src/games/BrainGame.php",
+      "src/Cli.php",
+      "src/Engine.php",
+      "src/Config.php"
     ]
   },
   "require": {
