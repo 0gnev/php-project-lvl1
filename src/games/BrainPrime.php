@@ -2,7 +2,6 @@
 
 namespace BrainGames\BrainPrime;
 
-
 use BrainGames\Engine;
 
 use const BrainGames\Config\ROUNDS_COUNT;
