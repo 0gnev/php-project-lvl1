@@ -1,6 +1,6 @@
 <?php
-
-namespace BrainGames\BrainProgression;
+    
+namespace BrainGames\Games\BrainProgression;
 
 use BrainGames\Engine;
 
@@ -13,19 +13,19 @@ const ARRAY_SIZE = 10;
 function brain_progression()
 {
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
-        $a = rand(MIN_RAND_NUMBER, MAX_RAND_NUMBER);
-        $k = rand(MIN_RAND_NUMBER, INCRIMENT);
-        $m = rand(0, ARRAY_SIZE - 1);
+        $init_value = rand(MIN_RAND_NUMBER, MAX_RAND_NUMBER);
+        $prog_step = rand(MIN_RAND_NUMBER, INCRIMENT);
+        $hidden = rand(0, ARRAY_SIZE - 1);
         $questions[$i] = '';
         for ($l = 0; $l < ARRAY_SIZE; $l++) {
-            if ($l == $m) {
+            if ($l == $hidden) {
                 $questions[$i] .= '.. ';
             } else {
-                $temp = $a + $k * $i;
+                $temp = $init_value + $prog_step * $i;
                 $questions[$i] .= "{$temp} ";
             }
         }
-        $answers[$i] = $a + $k * $m;
+        $answers[$i] = $init_value + $prog_step * $hidden;
     }
     Engine\game('What number is missing in the progression?', $questions, $answers);
 }

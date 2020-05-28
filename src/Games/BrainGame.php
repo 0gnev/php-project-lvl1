@@ -1,6 +1,6 @@
 <?php
 
-namespace BrainGames\BrainGame;
+namespace BrainGames\Games\BrainGame;
 
 use BrainGames\Cli;
 
