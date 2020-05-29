@@ -21,7 +21,7 @@ function brain_progression()
             if ($l == $hidden) {
                 $questions[$i] .= '.. ';
             } else {
-                $temp = $init_value + $prog_step * $i;
+                $temp = $init_value + $prog_step * $l;
                 $questions[$i] .= "{$temp} ";
             }
         }
