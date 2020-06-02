@@ -3,6 +3,6 @@
 <?php
 require __DIR__ . '/../vendor/autoload.php';
 
-use BrainGames\Games\BrainEven;
+use function BrainGames\Games\Even\brainEven;
 
-BrainEven\brain_even();
+brainEven();

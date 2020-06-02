@@ -1,16 +1,15 @@
 <?php
 
-namespace BrainGames\Games\BrainPrime;
+namespace BrainGames\Games\Prime;
 
-use BrainGames\Engine;
-
+use function BrainGames\Engine\game;
 use const BrainGames\Config\ROUNDS_COUNT;
 
 const MAX_RAND_NUMBER = 100;
 const MIN_RAND_NUMBER = 1;
-function is_prime($a)
+function isPrime($a)
 {
-    if ($a === 2) {
+    if ($a <= 2) {
         return true;
     }
     $i = 2;
@@ -23,12 +22,13 @@ function is_prime($a)
     return true;
 }
 
-function brain_prime()
+function brainPrime()
 {
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $number = rand(MIN_RAND_NUMBER, MAX_RAND_NUMBER);
-        $questions[$i] = $number;
-        $answers[$i] = is_prime($number) ? 'yes' : 'no';
+        $questions[$i]['question'] = $number;
+        $questions[$i]['answer'] = isPrime($number) ? 'yes' : 'no';
     }
-    Engine\game('Answer "yes" if given number is prime. Otherwise answer "no".', $questions, $answers);
+    $intro = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+    game($intro, $questions);
 }

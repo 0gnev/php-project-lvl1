@@ -1,14 +1,13 @@
 <?php
 
-namespace BrainGames\Games\BrainGcd;
+namespace BrainGames\Games\Gcd;
 
-use BrainGames\Engine;
-
+use function BrainGames\Engine\game;
 use const BrainGames\Config\ROUNDS_COUNT;
 
 const MAX_RAND_NUMBER = 100;
 const MIN_RAND_NUMBER = 1;
-function get_gcd($a, $b)
+function getGcd($a, $b)
 {
     while ($a != 0 && $b != 0) {
         if ($a > $b) {
@@ -19,13 +18,14 @@ function get_gcd($a, $b)
     }
     return $a + $b;
 }
-function brain_gcd()
+function brainGcd()
 {
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $a = rand(MIN_RAND_NUMBER, MAX_RAND_NUMBER);
         $b = rand(MIN_RAND_NUMBER, MAX_RAND_NUMBER);
-        $questions[$i] = "{$a} {$b}";
-        $answers[$i] = get_gcd($a, $b);
+        $questions[$i]['question'] = "{$a} {$b}";
+        $questions[$i]['answer'] = getGcd($a, $b);
     }
-    Engine\game('Find the greatest common divisor of given numbers.', $questions, $answers);
+    $intro = 'Find the greatest common divisor of given numbers.';
+    game($intro, $questions);
 }

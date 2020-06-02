@@ -3,6 +3,6 @@
 <?php
 require __DIR__ . '/../vendor/autoload.php';
 
-use BrainGames\Games\BrainPrime;
+use function BrainGames\Games\Prime\brainPrime;
 
-BrainPrime\brain_prime();
+brainPrime();

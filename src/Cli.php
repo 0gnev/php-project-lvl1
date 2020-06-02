@@ -13,22 +13,11 @@ function run($rule)
     line("Hello, %s!", $name);
     return $name;
 }
-function ask($question, $correct_answer, $name)
+function ask($question)
 {
     line("Question: %s", $question);
     $answer = prompt("Your answer");
-    if ($answer === $correct_answer) {
-        line("Correct!");
-        return true;
-    } else {
-        line(
-            '"%s" is wrong answer ;(. Correct answer was "%s". Let\'s try again, %s!',
-            $answer,
-            $correct_answer,
-            $name
-        );
-        return false;
-    }
+    return $answer;
 }
 function congrat($name)
 {
