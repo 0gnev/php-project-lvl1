@@ -2,9 +2,9 @@
 
 namespace BrainGames\Games\Progression;
 
-use const BrainGames\Config\ROUNDS_COUNT;
-
 use function BrainGames\Engine\game;
+
+use const BrainGames\Config\ROUNDS_COUNT;
 
 const MAX_RAND_NUMBER = 100;
 const MIN_RAND_NUMBER = 1;
