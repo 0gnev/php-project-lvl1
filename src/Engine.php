@@ -3,6 +3,7 @@
 namespace BrainGames\Engine;
 
 use BrainGames\Cli;
+
 use function cli\line;
 
 function compare($answer, $correctAnswer, $name)
