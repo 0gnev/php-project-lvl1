@@ -8,11 +8,11 @@ src="https://api.codeclimate.com/v1/badges/93ff1e3d74b67fd9ce92/maintainability"
 Requirements: PHP >= 7.3, composer
 
 Istall:
-
 composer require global ognev/php-project-lvl1
 
-There are several games:
+Run: bin/brain-even (or another game)
 
+There are several games:
 
 brain-even game
 
