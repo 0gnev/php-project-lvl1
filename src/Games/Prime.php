@@ -10,8 +10,10 @@ const MAX_RAND_NUMBER = 100;
 const MIN_RAND_NUMBER = 1;
 function isPrime($a)
 {
-    if ($a <= 2) {
+    if ($a == 2) {
         return true;
+    } elseif ($a < 2) {
+        return false;
     }
     $i = 2;
     while ($i <= sqrt($a)) {

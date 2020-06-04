@@ -15,7 +15,7 @@ function brainCalc()
         $a = rand(MIN_RAND_NUMBER, MAX_RAND_NUMBER);
         $b = rand(MIN_RAND_NUMBER, MAX_RAND_NUMBER);
         $operators = ['+', '-', '*'];
-        switch (rand(0, 2)) {
+        switch (array_rand($operators)) {
             case 0:
                 $sign = $operators[0];
                 $questions[$i]['answer'] = $a + $b;
