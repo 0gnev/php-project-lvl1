@@ -15,7 +15,6 @@ Run: bin/brain-even (or another game)
 There are several games:
 
 brain-even game
-
 need to answer is it an even number or not
 <a href="https://asciinema.org/a/eZavz5V2z8p1Ne7Ovf8BY1Q5s" target="_blank"><img src="https://asciinema.org/a/eZavz5V2z8p1Ne7Ovf8BY1Q5s.svg" /></a>
 
