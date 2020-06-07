@@ -9,12 +9,11 @@
   "description": "hexlet education project",
   "license": "MIT",
   "bin": [
-    "bin/brain-games",
     "bin/brain-even",
     "bin/brain-calc",
-    "brain-gcd",
-    "brain-progression",
-    "brain-prime"
+    "bin/brain-gcd",
+    "bin/brain-progression",
+    "bin/brain-prime"
   ],
   "autoload": {
     "files": [
