@@ -12,7 +12,8 @@ function isPrime($a)
 {
     if ($a == 2) {
         return true;
-    } elseif ($a < 2) {
+    }
+    if ($a < 2) {
         return false;
     }
     $i = 2;

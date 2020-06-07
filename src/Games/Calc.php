@@ -15,17 +15,18 @@ function brainCalc()
         $a = rand(MIN_RAND_NUMBER, MAX_RAND_NUMBER);
         $b = rand(MIN_RAND_NUMBER, MAX_RAND_NUMBER);
         $operators = ['+', '-', '*'];
-        switch (array_rand($operators)) {
-            case 0:
-                $sign = $operators[0];
+        $operator = $operators[array_rand($operators)];
+        switch ($operator) {
+            case '+':
+                $sign = $operator;
                 $questions[$i]['answer'] = $a + $b;
                 break;
-            case 1:
-                $sign = $operators[1];
+            case '-':
+                $sign = $operator;
                 $questions[$i]['answer'] = $a - $b;
                 break;
-            case 2:
-                $sign = $operators[2];
+            case '*':
+                $sign = $operator;
                 $questions[$i]['answer'] = $a * $b;
                 break;
         }
