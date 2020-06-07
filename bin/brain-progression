@@ -10,6 +10,4 @@ if (file_exists(__DIR__.'/../../../autoload.php')) {
 
 use function BrainGames\Games\Progression\brainProgression;
 
-require __DIR__ . '/../vendor/autoload.php';
-
 brainProgression();
