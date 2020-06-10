@@ -2,7 +2,7 @@
 
 namespace BrainGames\Games\Calc;
 
-use function BrainGames\Engine\game;
+use function BrainGames\Engine\play;
 
 use const BrainGames\Config\ROUNDS_COUNT;
 
@@ -18,17 +18,17 @@ function brainCalc()
         $operator = $operators[array_rand($operators)];
         switch ($operator) {
             case '+':
-                $questions[$i]['answer'] = $a + $b;
+                $gameData[$i]['answer'] = $a + $b;
                 break;
             case '-':
-                $questions[$i]['answer'] = $a - $b;
+                $gameData[$i]['answer'] = $a - $b;
                 break;
             case '*':
-                $questions[$i]['answer'] = $a * $b;
+                $gameData[$i]['answer'] = $a * $b;
                 break;
         }
-        $questions[$i]['question'] = "{$a} {$operator} {$b}";
+        $gameData[$i]['question'] = "{$a} {$operator} {$b}";
     }
     $intro = "What is the result of the expression?";
-    game($intro, $questions);
+    play($intro, $gameData);
 }

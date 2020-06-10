@@ -5,7 +5,7 @@ namespace BrainGames\Cli;
 use function cli\line;
 use function cli\prompt;
 
-function run($rule)
+function introduce($rule)
 {
     line("Welcome to Brain Games!");
     line($rule);
@@ -18,8 +18,4 @@ function ask($question)
     line("Question: %s", $question);
     $answer = prompt("Your answer");
     return $answer;
-}
-function congrat($name)
-{
-    line("Congratulations, %s!", $name);
 }

@@ -2,7 +2,7 @@
 
 namespace BrainGames\Games\Progression;
 
-use function BrainGames\Engine\game;
+use function BrainGames\Engine\play;
 
 use const BrainGames\Config\ROUNDS_COUNT;
 
@@ -21,10 +21,10 @@ function brainProgression()
             $progressionElements[] = $firstElement + $progStep * $l;
         }
         $hidden = array_rand($progressionElements);
-        $questions[$i]['answer'] = $progressionElements[$hidden];
+        $gameData[$i]['answer'] = $progressionElements[$hidden];
         $progressionElements[$hidden] = '..';
-        $questions[$i]['question'] = implode(' ', $progressionElements);
+        $gameData[$i]['question'] = implode(' ', $progressionElements);
     }
     $intro = 'What number is missing in the progression?';
-    game($intro, $questions);
+    play($intro, $gameData);
 }

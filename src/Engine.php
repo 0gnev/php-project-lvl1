@@ -21,18 +21,17 @@ function compare($answer, $correctAnswer, $name)
         return false;
     }
 }
-function game($intro, $questions)
+function play($intro, $gameData)
 {
-    $name = Cli\run($intro);
+    $name = Cli\introduce($intro);
     $count = 0;
-    while ($count < count($questions)) {
-        $answer = Cli\ask($questions[$count]['question']);
-        if (compare($answer, $questions[$count]['answer'], $name)) {
+    while ($count < count($gameData)) {
+        $answer = Cli\ask($gameData[$count]['question']);
+        if (compare($answer, $gameData[$count]['answer'], $name)) {
             $count++;
         } else {
             return;
         }
     }
-
-    Cli\congrat($name);
+    line("Congratulations, %s!", $name);
 }
