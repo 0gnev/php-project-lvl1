@@ -22,7 +22,6 @@
       "src/Games/Gcd.php",
       "src/Games/Calc.php",
       "src/Games/Even.php",
-      "src/Cli.php",
       "src/Engine.php",
       "src/Config.php"
     ]
