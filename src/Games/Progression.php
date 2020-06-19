@@ -16,14 +16,14 @@ function brainProgression()
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $firstElement = rand(MIN_FIRST_ELEMENT, MAX_FIRST_ELEMENT);
         $progStep = rand(MIN_STEP, MAX_STEP);
-        $progressionElements = [];
+        $progression = [];
         for ($l = 0; $l < PROGRESSION_SIZE; $l++) {
-            $progressionElements[] = $firstElement + $progStep * $l;
+            $progression[] = $firstElement + $progStep * $l;
         }
-        $hidden = array_rand($progressionElements);
-        $gameData[$i]['answer'] = $progressionElements[$hidden];
-        $progressionElements[$hidden] = '..';
-        $gameData[$i]['question'] = implode(' ', $progressionElements);
+        $hidden = array_rand($progression);
+        $gameData[$i]['answer'] = $progression[$hidden];
+        $progression[$hidden] = '..';
+        $gameData[$i]['question'] = implode(' ', $progression);
     }
     $intro = 'What number is missing in the progression?';
     play($intro, $gameData);
