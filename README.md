@@ -7,7 +7,7 @@ src="https://api.codeclimate.com/v1/badges/93ff1e3d74b67fd9ce92/maintainability"
 
 Requirements: PHP >= 7.3, composer
 
-Istall:
+Install:
 `composer global require ognev/php-project-lvl1`
 
 Run in terminal: `brain-even` (or another game)
